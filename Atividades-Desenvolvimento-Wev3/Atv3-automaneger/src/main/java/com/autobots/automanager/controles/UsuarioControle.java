@@ -15,7 +15,6 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import com.autobots.automanager.dto.DadosAtualizaEmpresa;
 import com.autobots.automanager.dto.DadosListaUsuario;
 import com.autobots.automanager.dto.DadosObterUsuario;
 import com.autobots.automanager.dto.DadosAtualizaUsuario;

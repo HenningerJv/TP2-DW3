@@ -22,7 +22,11 @@ public class UsuarioListar {
 		List<Usuario> usuarios = repositorioUsuario.findAll();
 		List<DadosListaUsuario> listaUsuarios = new ArrayList<DadosListaUsuario>();
 		usuarios.forEach((usuario)->{
-			listaUsuarios.add(new DadosListaUsuario(usuario.getId(), usuario.getNome(), usuario.getNomeSocial()));					
+			listaUsuarios.add(new DadosListaUsuario(
+					usuario.getId(),
+					usuario.getNome(),
+					usuario.getNomeSocial()
+			));					
 		});
 		return listaUsuarios;
 	}

@@ -9,10 +9,8 @@ function Home() {
         <p>Por favor, selecione uma opção...</p>
         <hr />
         <p>Opções para cliente:</p>
-        <Link to="/cadastrar-cliente"><button>Cadastrar cliente</button></Link>
-        <Link to="/editar-cliente"><button>Editar cliente</button></Link>
-        <Link to="/listar-clientes"><button>Listar cliente(s)</button></Link>
-        <Link to="/excluir-cliente"><button>Excluir cliente</button></Link>
+        <Link to="/tipoCliente"><button>Cadastrar cliente</button></Link>
+        <Link to="/listarClientes"><button>Listar/Editar cliente(s)</button></Link>
         <hr />
         <p>Opções para gestão:</p>
         <Link to="/listar-acomodacoes"><button>Listar acomodações</button></Link>

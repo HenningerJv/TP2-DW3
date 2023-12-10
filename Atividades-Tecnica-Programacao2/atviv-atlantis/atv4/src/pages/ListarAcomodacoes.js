@@ -1,5 +1,6 @@
 import React, { useState, useEffect } from 'react';
 import Acomodacao from '../entidades/Acomodacao';
+import Cliente from '../entidades/Cliente';
 import { Link } from 'react-router-dom';
 
 function ListarAcomodacoes() {
@@ -16,6 +17,11 @@ function ListarAcomodacoes() {
         setAcomodacoes(acomodacoes.filter(acomodacao => acomodacao.id !== id));
     };
 
+    const getNomeClienteAlocado = (idCliente) => {
+        const cliente = Cliente.encontrarClientePorId(idCliente);
+        return cliente ? cliente.nome : 'Nenhum cliente alocado';
+    };
+
     return (
         <div>
             <h2>Lista de Acomodações</h2>
@@ -23,7 +29,8 @@ function ListarAcomodacoes() {
                 {acomodacoes.map((acomodacao) => (
                     <li key={acomodacao.id}>
                         <strong>Nome:</strong> {acomodacao.nome}, <strong>Camas de Solteiro:</strong> {acomodacao.camaSolteiro}, <strong>Camas de Casal:</strong> {acomodacao.camaCasal},
-                        <strong>Suíte:</strong> {acomodacao.suite}, <strong>Climatização:</strong> {acomodacao.climatizacao ? 'Sim' : 'Não'}, <strong>Garagem:</strong> {acomodacao.garagem}
+                        <strong>Suíte:</strong> {acomodacao.suite}, <strong>Climatização:</strong> {acomodacao.climatizacao ? 'Sim' : 'Não'}, <strong>Garagem:</strong> {acomodacao.garagem},
+                        <strong>Cliente Alocado:</strong> {getNomeClienteAlocado(acomodacao.usuario)}
                         {' '}
                         <Link to={`/alterarAcomodacao/${acomodacao.id}`}>
                             <button>Alterar</button>

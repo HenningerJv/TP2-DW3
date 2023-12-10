@@ -59,7 +59,7 @@ class Acomodacao {
       Acomodacao.acomodacoes = Acomodacao.acomodacoes.filter(acomodacao => acomodacao.id !== id);
     }
 
-    static alocarUsuario(idAcomodacao, idUsuario) {
+    static alocarCliente(idAcomodacao, idUsuario) {
       const acomodacao = Acomodacao.encontrarAcomodacaoPorId(idAcomodacao);
       if (acomodacao) {
         acomodacao.usuario = idUsuario;

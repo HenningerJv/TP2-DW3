@@ -31,4 +31,8 @@ export default class Cliente {
   static excluirCliente(id) {
     Cliente.clientes = Cliente.clientes.filter(cliente => cliente.id !== id);
   }
+
+  static encontrarClientePorId(id) {
+    return Cliente.clientes.find(cliente => cliente.id === id);
+  }
 }

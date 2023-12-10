@@ -13,7 +13,8 @@ function Home() {
         <Link to="/listarClientes"><button>Listar/Editar cliente(s)</button></Link>
         <hr />
         <p>Opções para gestão:</p>
-        <Link to="/listar-acomodacoes"><button>Listar acomodações</button></Link>
+        <Link to="/listarAcomodacoes"><button>Listar acomodações</button></Link>
+        <Link to="/criar-acomodacao"><button>Criar acomodação</button></Link>
         <Link to="/acomodar-clientes"><button>Acomodar clientes aos quartos</button></Link>
         <hr />
       </div>
